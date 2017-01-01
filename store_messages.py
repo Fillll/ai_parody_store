@@ -44,8 +44,6 @@ def handle(msg):
         meta_data.append(content_part['reply_to_message']['chat'])
         content_part['reply_to_message']['chat'] = {'id': content_part['reply_to_message']['chat']['id']}
 
-
-
     store_content(content_part)
     for data in meta_data:
         store_metadata(data)
